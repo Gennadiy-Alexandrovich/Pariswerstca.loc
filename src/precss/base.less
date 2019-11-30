@@ -1,0 +1,146 @@
+
+.reset();
+.wrapper {
+  .wrapper();
+  position: relative;
+  min-width: 320px;
+}
+.wrapper-full {
+  .wrapper-full();
+  position: relative;
+
+}
+@supports (padding: max(0px)) {
+  .wrapper {
+    padding-left: max(@offset_one_side, env(safe-area-insert-left));
+    padding-right: max(@offset_one_side, env(safe-area-insert-right));
+  }
+}
+
+.pseudo-full-width-background::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  background: inherit;
+  top: 0;
+  left: -50vw;
+  right: -50vw;
+  margin: auto;
+  z-index: -1;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+button, input, textarea {
+  -webkit-appearance: none;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance:none;
+}
+.h1, .h2 .h3, .h4, .h5, h6{
+  line-height: 1.4;
+  //text-transform: uppercase;
+}
+html {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: @font_MontserratRegular, sans-serif;
+  font-size: @font_size;
+  line-height: @line_height;//Base-1.75
+}
+
+body {
+
+  min-height: 100%;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+a, .link {
+  text-decoration: none;
+  color: inherit;
+  transition: all .5s;
+}
+a:link, .link:link  {
+
+}
+
+a:visited,.link:visited  {
+
+}
+
+a:hover, .link:hover  {
+
+}
+
+a:focus, .link:focus  {
+  outline: none;
+}
+
+a:active, .link:active  {
+
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.site-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+//.degubGrid{
+//  .debug(rgba(0, 0, 0, 0.4), 1px solid #ff0);
+//}
+
+
+//Стили для кнопки тег а
+// .button
+// 	display: inline-block
+// 	border: none
+// 	color: #fff
+// 	text-decoration: none
+// 	background-color: $accent
+// 	padding: 15px 45px
+// 	font-size: 13px
+// 	text-transform: uppercase
+// 	font-weight: 600
+// 	letter-spacing: 3px
+// 	border-radius: 2px
+// 	text-align: center
+// 	position: relative
+// 	outline: none
+// 	transition: background-color .1s ease
+// 	&::after
+// 		transition: background-color .2s ease
+// 		position: absolute
+// 		content: '
+// 		height: 4px
+// 		bottom: 0
+// 		width: 100%
+// 		background-color: darken($accent, 50%)
+// 		opacity: .18
+// 		border-bottom-left-radius: 2px
+// 		border-bottom-right-radius: 2px
+// 		left: 0
+// 	&:focus, &:hover
+// 		text-decoration: none
+// 		color: #fff
+// 	&:hover
+// 		background-color: lighten($accent, 5%)
+// 		&::after
+// 			opacity: .22
+// 	&:active
+// 		background-color: darken($accent, 5%)
+// 		&::after
+// 			opacity: .32
+

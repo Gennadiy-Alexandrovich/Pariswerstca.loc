@@ -1,0 +1,37 @@
+.scroll-to-top {
+  background: @color_black none repeat scroll 0 0;
+  color: @color_white;
+  bottom: 10%;
+  cursor: pointer;
+  position: fixed;
+  overflow: hidden;
+  right: 5%;
+  z-index: 22;
+  padding: 5px 5px;
+  border-radius: 5px;
+  text-align: center;
+  -webkit-transform: translateY(100px);
+  transform: translateY(100px);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  &:hover{
+    background: @color_footer_text;
+    opacity: .8;
+  }
+  &__img{
+    display: inline-block;
+    fill: currentColor;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.vis {
+  /*  display: block;*/
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
